@@ -27,7 +27,7 @@ public class AdminController {
     }
 
     @GetMapping("/create")
-    public String create(ModelMap modelMap) {
+    public String createUserForm(ModelMap modelMap) {
         modelMap.addAttribute("user", new User());
         modelMap.addAttribute("role", roleService.getAllUser());
         return "create";
@@ -40,7 +40,7 @@ public class AdminController {
     }
 
     @GetMapping("/edit")
-    public String edit(@RequestParam(value = "id", required = false) Long id, ModelMap modelMap) {
+    public String editUserForm(@RequestParam(value = "id", required = false) Long id, ModelMap modelMap) {
         modelMap.addAttribute("user", userService.getById(id));
         modelMap.addAttribute("role", roleService.getAllUser());
         return "edit";
