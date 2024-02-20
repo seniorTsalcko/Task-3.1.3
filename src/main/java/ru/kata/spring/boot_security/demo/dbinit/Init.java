@@ -1,4 +1,4 @@
-package ru.kata.spring.boot_security.demo.DbInit;
+package ru.kata.spring.boot_security.demo.dbinit;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationListener;
@@ -12,6 +12,7 @@ import ru.kata.spring.boot_security.demo.services.RoleServiceImpl;
 
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 
 @Component
